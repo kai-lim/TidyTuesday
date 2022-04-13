@@ -49,7 +49,7 @@ tm_shape(afripop2000)+
 
 # static (plot) view:
 tmap_mode('plot') 
-tmap::tm_shape(afripop2020) +
+map<-tmap::tm_shape(afripop2020) +
   tm_raster(palette = viridis(n=6), breaks=c(0,2,20,200,2000,25000)) +
   tm_shape(africountries) +
   tm_borders("white", lwd = 0.1) +
@@ -59,7 +59,9 @@ tmap::tm_shape(afripop2020) +
   tm_symbols(col = "blue", alpha=0.4, scale = .6 )+
   tm_legend(show = FALSE)
 
+map
 
+tmap_save(map,"map.png")
 
 # interactive view:
 tmap_mode('view') 

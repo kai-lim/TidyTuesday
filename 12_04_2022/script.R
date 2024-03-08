@@ -5,4 +5,4 @@ setwd(here::here("12_04_2022"))
 
 tuesdata <- tidytuesdayR::tt_load('2022-04-12')
 
-
+death_time<-tuesdata$death_timeseries
